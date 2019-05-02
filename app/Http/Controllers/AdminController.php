@@ -12,8 +12,13 @@ use DB;
 
 class AdminController extends Controller
 {
+	/*
+	nếu id=0 => hiển thị trang thêm sản phẩm
+	nếu id != 0 => hiện thị trang sửa sản phẩm và thông tin sản phẩm đó
+	*/
       public function addProduct($id = 0) {
       	if($id == 0) {
+			
       		$dataCategory = ProductType::all()->toArray();
       		return view('admin.sanpham.product_add', ['category' => $dataCategory]);
       	}else {
@@ -40,6 +45,7 @@ class AdminController extends Controller
         $new = (isset($data['new']) && $data['new'] == "on") ? "1" : "0";
         $unit = $data['unit'];
         $nameImage = '';
+		dd(time());
 
          if ($request->hasFile('image')) {
 

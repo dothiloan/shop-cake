@@ -10,7 +10,7 @@
 				<div class="pull-right auto-width-right">
 					<ul class="top-details menu-beta l-inline">
 						@if(Auth::check())
-							<li><a>Tài khoản<i class="fa fa-user"></i></a></li>
+							<li><a>Xin chào : {!! Auth::user()->full_name !!}<i class="fa fa-user"></i></a></li>
 							<li><a href="{{route('logoutindex')}}">Đăng xuất</a></li>
 						@else
 							<li><a href="{{route('signin')}}">Đăng kí</a></li>
