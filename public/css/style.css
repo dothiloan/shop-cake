@@ -1,0 +1,15 @@
+.thumbnail img {
+	height: 100px !important;
+	position: relative;
+}
+
+.thumbnail {
+	min-height: 250px;
+}
+
+
+
+.thumbnail .caption > p:last-child {
+	position: absolute;
+	top: 75%;
+}
